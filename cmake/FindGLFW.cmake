@@ -13,6 +13,7 @@ find_path(GLFW_INCLUDE_DIR GLFW/glfw3.h
 
     PATHS
     $ENV{GLFW_DIR}
+    ${CMAKE_SOURCE_DIR}/glfw/include
     /usr
     /usr/local
     /usr/include/GL
@@ -61,6 +62,7 @@ find_library(GLFW_LIBRARY_RELEASE NAMES ${GLFW_NAMES}
 
     PATHS
     $ENV{GLFW_DIR}
+    ${CMAKE_SOURCE_DIR}/lib/glfw/lib/Release
     /lib/x64
     /lib/cocoa
     /usr
@@ -89,6 +91,7 @@ find_library(GLFW_LIBRARY_DEBUG NAMES ${GLFW_DEBUG_NAMES}
 
     PATHS
     $ENV{GLFW_DIR}
+    ${CMAKE_SOURCE_DIR}/lib/glfw/lib/Debug
     /lib/x64
     /lib/cocoa
     /usr
@@ -129,6 +132,7 @@ if(WIN32 AND GLFW_SHARED)
 
         PATHS
         $ENV{GLFW_DIR}
+        ${CMAKE_SOURCE_DIR}/lib/glfw/bin
         /lib/x64
         /lib/cocoa
 
